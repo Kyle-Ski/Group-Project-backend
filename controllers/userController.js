@@ -2,6 +2,7 @@ const knex = require('../db/connection')
 
 const getALL = (req, res, next) => {
     return knex('user_profile')
+    .select('name', 'gender', 'age', 'location', 'picture', 'email')
     .orderBy('id', 'asc')
     .then(users => res.json({users}))
 }
