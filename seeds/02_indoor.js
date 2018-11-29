@@ -5,11 +5,11 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('indoor').insert([
-        {id: 1, activity: 'Netflix'},
-        {id: 2, activity: 'Board Games'},
-        {id: 3, activity: 'Drinking Games'},
-        {id: 4, activity: 'Cooking'},
-        {id: 5, activity: 'Couples Coding'},
+        {id: 1, type: 'Netflix'},
+        {id: 2, type: 'Board Games'},
+        {id: 3, type: 'Drinking Games'},
+        {id: 4, type: 'Cooking'},
+        {id: 5, type: 'Couples Coding'},
       ]);
     });
 };

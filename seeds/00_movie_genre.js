@@ -5,12 +5,12 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('movie_genre').insert([
-        {id: 1, genre: 'Horror'},
-        {id: 2, genre: 'Comedy'},
-        {id: 3, genre: 'Sci-fi'},
-        {id: 4, genre: 'Romantic-Comedy'},
-        {id: 5, genre: 'Action'},
-        {id: 6, genre: 'Romantic'},
+        {id: 1, type: 'Horror'},
+        {id: 2, type: 'Comedy'},
+        {id: 3, type: 'Sci-fi'},
+        {id: 4, type: 'Romantic-Comedy'},
+        {id: 5, type: 'Action'},
+        {id: 6, type: 'Romantic'},
       ]);
     });
 };

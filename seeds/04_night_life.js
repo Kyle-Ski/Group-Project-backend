@@ -5,11 +5,11 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('night_life').insert([
-        {id: 1, activity: 'Roof-Top Bar'},
-        {id: 2, activity: 'Night Club'},
-        {id: 3, activity: 'Jazz Club'},
-        {id: 4, activity: 'Live Music'},
-        {id: 5, activity: 'Speakeasy'},
+        {id: 1, type: 'Roof-Top Bar'},
+        {id: 2, type: 'Night Club'},
+        {id: 3, type: 'Jazz Club'},
+        {id: 4, type: 'Live Music'},
+        {id: 5, type: 'Speakeasy'},
       ]);
     });
 };

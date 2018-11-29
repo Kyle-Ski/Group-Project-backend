@@ -5,16 +5,16 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('outdoor').insert([
-        {id: 1, activity: 'Hiking'},
-        {id: 2, activity: 'Bowling'},
-        {id: 3, activity: 'Swimming'},
-        {id: 4, activity: 'Mini Golf'},
-        {id: 5, activity: 'Rock Climbing'},
-        {id: 6, activity: 'Picnic'},
-        {id: 7, activity: 'Riding Bikes/Scooter'},
-        {id: 8, activity: 'Ski/Snowboarding'},
-        {id: 9, activity: 'Museum'},
-        {id: 10, activity: 'Dancing'},
+        {id: 1, type: 'Hiking'},
+        {id: 2, type: 'Bowling'},
+        {id: 3, type: 'Swimming'},
+        {id: 4, type: 'Mini Golf'},
+        {id: 5, type: 'Rock Climbing'},
+        {id: 6, type: 'Picnic'},
+        {id: 7, type: 'Riding Bikes/Scooter'},
+        {id: 8, type: 'Ski/Snowboarding'},
+        {id: 9, type: 'Museum'},
+        {id: 10, type: 'Dancing'},
       ]);
     });
 };
