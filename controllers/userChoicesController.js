@@ -21,7 +21,7 @@ const getOne = (req, res, next) => {
     } else {
         return knex('user_choices')
         .select('*')
-        .where({id: id})
+        .where({id: user_id})
         .then(choices => {
             if(!choices.length){
                 return res.json({error: "This choice doesn't exist"})
