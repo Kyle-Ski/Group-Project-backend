@@ -12,7 +12,7 @@ const getOne = (req, res, next) => {
         res.json({error: 'Please enter a valid id number'})
     } else {
         return knex('user_profile')
-            .select('*')
+            .select('name', 'gender', 'age', 'location', 'picture', 'email')
             .where({id: id})
             .then(user => {
                 if(!user.length){
