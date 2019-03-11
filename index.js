@@ -24,15 +24,26 @@ app.use(function(req, res, next) {
 })
 
 app.get("/", (req, res, next) => {
-  res.json({
-    message: "Welcome to the Server! Below are the endpoints:",
-    food: `http://localhost:${port}/food`,
-    "movie genres": `http://localhost:${port}/movie`,
-    indoor: `http://localhost:${port}/indoor`,
-    outdoor: `http://localhost:${port}/outdoor`,
-    nightlife: `http://localhost:${port}/nightlife`,
-    users: `http://localhost:${port}/users`
-  })
+  res.json(
+    process.env.NODE_ENV !== "production"
+      ? {
+          message: "Welcome to the Server! Below are the endpoints:",
+          food: `http://localhost:${port}/food`,
+          "movie genres": `http://localhost:${port}/movie`,
+          indoor: `http://localhost:${port}/indoor`,
+          outdoor: `http://localhost:${port}/outdoor`,
+          nightlife: `http://localhost:${port}/nightlife`,
+          users: `http://localhost:${port}/users`
+        }
+      : {
+          food: `http://dream-date.herokuapp.com/food`,
+          "movie genres": `http://dream-date.herokuapp.com/movie`,
+          indoor: `http://dream-date.herokuapp.com/indoor`,
+          outdoor: `http://dream-date.herokuapp.com/outdoor`,
+          nightlife: `http://dream-date.herokuapp.com/nightlife`,
+          users: `http://dream-date.herokuapp.com/users`
+        }
+  )
 })
 
 app.use("/food", foodRoutes)
